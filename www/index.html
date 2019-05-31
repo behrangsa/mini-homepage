@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Spring Ipsum</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/logo.png"
+            class="d-inline-block align-top"
+            width="128"
+            height="128"
+            alt="Spring Ipsum"
+          />
+        </a>
+
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-toggle="modal"
+          data-target="#login-modal"
+        >
+          Login
+        </button>
+      </nav>
+
+      <div class="jumbotron">
+        <h1>Welcome to Spring Ipsum</h1>
+        <p class="lead">How to use Spring Security Pre-Authentication</p>
+        <ul>
+          <li>
+            This static website is hosted at
+            <a href="https://spring-ipsum.netlify.com"
+              >spring-ipsum.netlify.com</a
+            >
+          </li>
+          <li>
+            An authentication server is hosted at
+            <a href="https://spring-ipsum-auth.heroku.com"
+              >spring-ipsum-auth.heroku.com</a
+            >
+          </li>
+          <li>
+            A Spring Boot based API is hosted at
+            <a href="https://spring-ipsum-api.heroku.com">
+              spring-ipsum-api.heroku.com</a
+            >
+          </li>
+        </ul>
+        <p>
+          Together, they show how you can secure a Spring Boot based API using
+          <a href="">Pre-Authentication</a>.
+        </p>
+
+        <h4>References:</h4>
+        <ul>
+          <li>
+            <a
+              href="https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/"
+              >Spring Security Reference</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/#preauth"
+              >Spring Security: Pre-Authentication Scenarios</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://spring.io/guides/topicals/spring-security-architecture"
+              >Spring Security Architecture</a
+            >
+          </li>
+        </ul>
+
+        <h4>Repositories</h4>
+
+        <ul>
+          <li>
+            <a href="https://github.com/behrangsa/spring-ipsum-website"
+              >spring-ipsum-website</a
+            >
+          </li>
+
+          <li>
+            <a href="https://github.com/behrangsa/spring-ipsum-auth"
+              >spring-ipsum-auth</a
+            >
+          </li>
+
+          <li>
+            <a href="https://github.com/behrangsa/spring-ipsum-api"
+              >spring-ipsum-api</a
+            >
+          </li>
+
+          <li>
+            <a href="https://github.com/behrangsa/spring-ipsum-api-gw"
+              >spring-ipsum-api-gw</a
+            >
+          </li>
+        </ul>
+
+        <h4>Valid username/password</h4>
+        <ul>
+          <li>Username: <code>arnold.schwarzenegger@example.com</code>.</li>
+          <li>Password: <code>Hasta la vista, baby!</code>.</li>
+        </ul>
+      </div>
+
+      <pre><code id="session"></code></pre>
+    </div>
+
+    <div class="modal" id="login-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="usernameInput">Username:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="usernameInput"
+                  aria-describedby="usernameHelp"
+                  placeholder="Enter username"
+                />
+                <small id="usernameHelp" class="form-text text-muted"
+                  >Enter <code>arnold.schwarzenegger@example.com</code>.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="passwordInput">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordInput"
+                  aria-describedby="passwordHelp"
+                  placeholder="Password"
+                />
+                <small id="passwordHelp" class="form-text text-muted"
+                  >Enter <code>Hasta la vista, baby!</code>.</small
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-js-id="login" class="btn btn-primary">
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
